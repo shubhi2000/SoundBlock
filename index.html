@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<style>
+		h1{color:red;}
+		table{border:1px solid black;background-color:#95f441;}
+		th{border:2px solid #f141f4;}
+		body{background-color:#1e1e1d;}
+		span{color:blue;}
+		div>table{background-color:#d2f282;}
+	</style>
+	<div id="logo">
+	<table width="100%">
+		<tr>
+			<th>
+				<img src="logo.jpeg" height="200px"/>
+			</th>
+			<th>
+				<big><big><big><big><big><big><big><h1 align="CENTER"> SoundBlock </h1></big></big></big></big></big></big></big>
+			</th>
+		</tr>
+	</table>
+	</div>
+	<table width="100%">
+		<tr> <th><a href="index.html">Main Page</a></th>
+			<th><a href="instructions.html">Instructions</a></th>
+			<th><a href="aboutus.html">About us</a></th> 
+		</tr>
+	</table>
+	<br>
+	<style>
+		* {box-sizing:border-box;}
+		.slideshow-container{
+			max-width:1000px;
+			position:relative;
+			margin:auto;
+		}
+		.mySlides{
+			display:none;
+		}
+		div>img{
+			position:relative;
+			left:100px;
+		}
+	</style>
+	<div class="slideshow-container">
+	<div class="mySlides">
+		<img src="slide2.jpeg" height="400px" style="width:80%">
+	</div>
+	<div class="mySlides">
+		<img src="slide3.jpeg" height="400px" style="width:80%">
+	</div>
+	<div class="mySlides">
+		<img src="slide1.jpeg" height="400px" style="width:80%">
+	</div>
+	</div>
+	<script>
+		var slideIndex=1;
+		showSlides(slideIndex);
+		function plusSlides(n){
+			showSlides(slideIndex+=n);
+		}
+		function currentSlide(n){
+			showSlides(slideIndex=n);
+		}
+		function showSlides(n){
+			var i;
+			var slides=document.getElementsByClassName("mySlides");
+			var dots=document.getElementsByClassName("dot");
+			if(n>slides.length) {
+				slideIndex=1;
+			}
+			if (n<1){
+				slideIndex=slides.length;
+			}
+			for(i=0;i<slides.length;i++){
+				slides[i].style.display="none";
+			}
+			for(i=0;i<dots.length;i++){
+				dots[i].className=dots[i].className.replace("active","");
+			}
+			slides[slideIndex-1].style.display="block";
+			dots[slideIndex-1].className+=" active";
+		}
+		var slideIndex=1;
+		showSlides();
+		function showSlides(){
+			var i;
+			var slides=document.getElementsByClassName("mySlides");
+			for(i=0;i<slides.length;i++){
+				slides[i].style.display="none";
+			}
+			slideIndex--;
+			if (slideIndex==0){slideIndex=slides.length;}
+			if (slideIndex>slides.length) {slideIndex=1;}
+			slides[slideIndex-1].style.display="block";
+			setTimeout(showSlides,2000);
+		}
+	</script>
+	<br>
+	<h1 align="Center"><span>About The Product</span></h1></span>
+	<br>
+	<style>
+		/*h2{	padding-left:200px;
+			width:650px;
+			color:green;
+			border:2px solid pink;}*/
+		h2{
+			color:green;
+			text-align:center;
+		}
+		h3{
+			color:#bc3263;
+			text-align:center;
+		}
+		#text{
+			color:#ce9118;
+			text-align:center;
+		}
+		#wearable>img{
+			position:relative;
+			left:300px;
+		}
+		video{
+			position:relative;
+			left:200px;
+		}
+	</style>
+	<h2> Were you ever talking to your girlfriend/boyfriend and found parents eavesdropping? </h2> 
+	<h2> Got a call in library? </h2>
+	<h3> HERE IS THE SOLUTION </h3>
+	<big><h3><div id="text"> <strong>SoundBlock</strong> is a mask-type wearable, which allows you to speak privately by blocking your sound from going outside. It has a very cool appearance. When you are not using it, you can wear it in your neck just like a headphone, giving you a very swaggy look. Whenever you get a private call or you don't want to disturb the people in your surroundings or you want the people around you to escape from your tuneless song, just wear SoundBlock on your mouth and enjoy your privacy.</div></h3></big>
+	<br>
+	<div id="wearable"><img src="headphone.jpeg" height="500px" /></div>
+	<br>
+	<br>
+	<video height="500" controls>
+			<source src="IED_wsubtitles.mp4" type="video/mp4">
+		</video>
+</body>
+</html>
